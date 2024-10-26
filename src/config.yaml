@@ -1,0 +1,40 @@
+site:
+  name: YourBus
+  site: "https://yourbus.nombiembre.dev"
+  base: "/"
+  trailingSlash: false
+
+  googleSiteVerificationId: false
+
+# Default SEO metadata
+metadata:
+  title:
+    default: YourBus
+    template: "%s — YourBus"
+  description: "\U0001F680 Transforma tu experiencia de viaje con nuestra innovadora aplicación de buses, donde la seguridad y el ahorro de tiempo son nuestra prioridad. "
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: YourBus
+    images:
+      - url: "~/assets/images/default.png"
+        width: 1200
+        height: 628
+    type: website
+  twitter:
+    handle: "@YourBus"
+    site: "@YourBus"
+    cardType: summary_large_image
+
+i18n:
+  language: es
+  textDirection: ltr
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: "G-8NKJ1E5J8Y"
+
+ui:
+  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

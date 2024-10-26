@@ -1,0 +1,39 @@
+---
+import Asterisco from "~/assets/icons/Asterisco.astro"
+import Section from "./Section.astro"
+
+const NAVIGATION = [
+  {
+    name: 'Nosotros',
+    href: '/about',
+  },
+  {
+    name: 'Contacto',
+    href: '/contact',
+  }
+]
+---
+
+<header class="border-b border-gray-300 backdrop-blur-md sticky top-0">
+  <Section class="flex items-center justify-between" padingVertical="small">
+    <div class="flex items-center gap-2">
+      <a href="/" class="flex items-center gap-2">
+        <Asterisco />
+        <h2 class="text-3xl">
+          YourBus
+        </h2>
+      </a>
+    </div>
+    <nav>
+      <ul class="flex items-center gap-4">
+        {
+          NAVIGATION.map(({ name, href }) => (
+            <li>
+              <a href={href} class="text-base">{name}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </Section>
+</header>

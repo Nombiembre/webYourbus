@@ -1,0 +1,60 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Section from '~/components/common/Section.astro';
+import Input from '~/components/common/Input.astro';
+
+const metadata = {
+  title: 'YourBus — Tu viaje seguro y rapido, a un click de conectar con el mundo',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <div
+    class="fixed inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#2563eb_100%)]"
+  >
+  </div>
+  <Section class="grid grid-cols-1 md:grid-cols-[2fr_1fr]" padingVertical="medium">
+    <div class="grid place-content-center">
+      <h1 class="text-4xl md:text-7xl text-center font-bold md:max-w-[25ch] md:mx-auto">
+        <!-- La app que te ahorra tiempo y te conecta -->
+        <!-- La aplicacion que optimiza tu tiempo y te conecta con el mundo -->
+        <!-- Contectate y ahorra tiempo, simplifica tu vida -->
+        <!-- Viaja facil, viaja lejos, tu ruta en un click -->
+        <!-- Tu viaje seguro y rapido, conecta ciudades al instante -->
+        Tu viaje <span class="text-gradient">seguro y rapido</span>, a un click de conectar con el mundo
+      </h1>
+      <p class="md:max-w-[90ch] md:mx-auto text-slate-600 text-center mt-4 text-sm md:text-lg">
+        <!-- Descubre una nueva forma de viajar con nuestra aplicación de buses,  diseñada para ofrecerte la máxima seguridad y un ahorro de tiempo inigualable. -->
+        Transforma tu experiencia de viaje con nuestra innovadora aplicación de buses, donde la seguridad y el ahorro de
+        tiempo son nuestra prioridad.
+      </p>
+      <Input />
+    </div>
+    <div>
+      <img src="/images/mockupTransparent.png" class="max-w-[400px] w-full mx-auto rounded-xl" alt="" />
+    </div>
+  </Section>
+  <!-- <FeaturesCard /> -->
+</Layout>
+
+<style>
+  :root {
+    --accent-gradient: linear-gradient(
+      90deg,
+      rgba(29, 78, 216, 1) 0%,
+      rgba(192, 38, 211, 1) 32%,
+      rgba(34, 211, 238, 1) 77%,
+      rgba(29, 78, 216, 1) 100%
+    );
+  }
+
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+</style>
