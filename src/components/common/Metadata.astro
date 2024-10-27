@@ -22,6 +22,7 @@ const {
   description,
   openGraph = {},
   twitter = {},
+  keywords,
 } = Astro.props;
 
 const seoProps: AstroSeoProps = merge(
@@ -65,4 +66,5 @@ const seoProps: AstroSeoProps = merge(
 );
 ---
 
+{keywords && <meta name="keywords" content={keywords} />}
 <AstroSeo {...{ ...seoProps, openGraph: await adaptOpenGraphImages(seoProps?.openGraph, Astro.site) }} />
