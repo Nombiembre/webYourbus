@@ -1,6 +1,7 @@
 ---
 import Asterisco from "~/assets/icons/Asterisco.astro"
 import Section from "./Section.astro"
+import ToggleTheme from "./ToggleTheme.astro";
 
 const NAVIGATION = [
   {
@@ -12,6 +13,8 @@ const NAVIGATION = [
     href: '/contact',
   }
 ]
+
+const { showToggleTheme = true } = Astro.props;
 ---
 
 <header class="border-b border-gray-300 backdrop-blur-md sticky top-0">
@@ -24,16 +27,20 @@ const NAVIGATION = [
         </h2>
       </a>
     </div>
-    <nav>
-      <ul class="flex items-center gap-4">
-        {
-          NAVIGATION.map(({ name, href }) => (
-            <li>
-              <a href={href} class="text-base">{name}</a>
-            </li>
-          ))
-        }
-      </ul>
-    </nav>
-  </Section>
+    <div class="flex items-center gap-4">
+      <nav>
+        <ul class="flex items-center gap-4">
+          {
+            NAVIGATION.map(({ name, href }) => (
+              <li>
+                <a href={href} class="text-base">{name}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+        {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
+    </div>
+
+    </Section>
 </header>

@@ -1,5 +1,5 @@
 ---
-import "@fontsource-variable/inter";
+import '@fontsource-variable/inter';
 
 // 'DM Sans'
 // Nunito
@@ -27,10 +27,14 @@ import "@fontsource-variable/inter";
 />
 
 <style is:inline>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
   :root {
-    --aw-font-sans: "InterVariable";
-    --aw-font-serif: "InterVariable";
-    --aw-font-heading: "InterVariable";
+    --aw-font-sans: 'InterVariable';
+    --aw-font-serif: 'InterVariable';
+    --aw-font-heading: 'InterVariable';
 
     --aw-color-primary: rgb(1 97 239);
     --aw-color-secondary: rgb(1 84 207);
@@ -65,27 +69,27 @@ import "@fontsource-variable/inter";
   }
 
   .dark {
-    --aw-font-sans: "InterVariable";
-    --aw-font-serif: "InterVariable";
-    --aw-font-heading: "InterVariable";
+    --aw-font-sans: 'InterVariable';
+    --aw-font-serif: 'InterVariable';
+    --aw-font-heading: 'InterVariable';
 
-
-    --test: rgb(229,236,246);
+    --test: rgb(229, 236, 246);
     --aw-color-primary: rgb(1 97 239);
     --aw-color-secondary: rgb(1 84 207);
     --aw-color-accent: rgb(109 40 217);
 
-    /* --aw-color-text-heading: rgb(247, 248, 248);
+    --aw-bg-gradient: [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#2563eb_100%)];
+
+    --aw-color-text-heading: rgb(247, 248, 248);
     --aw-color-text-default: rgb(229 236 246);
     --aw-color-text-muted: rgb(229 236 246 / 66%);
-    --aw-color-bg-page: rgb(3 6 32); */
+    --aw-color-bg-page: rgb(3 6 32);
 
-    --aw-color-text-heading: rgb(0 0 0);
+
+    /* --aw-color-text-heading: rgb(0 0 0);
     --aw-color-text-default: rgb(16 16 16);
     --aw-color-text-muted: rgb(16 16 16 / 66%);
-    --aw-color-bg-page: rgb(255 255 255);
-
-    --aw-color-bg-page-dark: rgb(3 6 32);
+    --aw-color-bg-page: rgb(255 255 255); */
 
     ::selection {
       background-color: black;

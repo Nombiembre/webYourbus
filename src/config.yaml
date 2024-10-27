@@ -34,7 +34,8 @@ i18n:
 analytics:
   vendors:
     googleAnalytics:
-      id: "G-8NKJ1E5J8Y"
+      id: G-8NKJ1E5J8Y
+      partytown: true
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
