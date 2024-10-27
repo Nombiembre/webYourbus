@@ -34,23 +34,13 @@ const { language, textDirection } = I18N;
     <ApplyColorMode />
     <Metadata {...metadata} />
     <SiteVerification />
-    <!-- <Analytics /> -->
-
-    <!-- Google tag (gtag.js) -->
-    <script is:inline type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-8NKJ1E5J8Y"></script>
-    <script is:inline type="text/partytown">
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-8NKJ1E5J8Y');
-        console.log('Google Analytics loaded');
-    </script>
+    <Analytics />
 
     <!-- Comment the line below to disable View Transitions -->
     <ViewTransitions fallback="swap" />
   </head>
 
-  <body class="antialiased text-default bg-page tracking-tight">
+  <body>
     <slot />
 
     <BasicScripts />
