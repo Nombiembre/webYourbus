@@ -14,7 +14,6 @@ const NAVIGATION = [
   }
 ]
 
-const { showToggleTheme = true } = Astro.props;
 ---
 
 <header class="border-b border-gray-300 backdrop-blur-md sticky top-0">
@@ -39,7 +38,6 @@ const { showToggleTheme = true } = Astro.props;
           }
         </ul>
       </nav>
-        {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
     </div>
 
     </Section>
